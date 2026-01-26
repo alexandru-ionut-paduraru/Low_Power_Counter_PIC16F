@@ -1,0 +1,71 @@
+{
+    "version": "1.8",
+    "configurations": [
+        {
+            "name": "default",
+            "id": "",
+            "device": "PIC16F18345",
+            "imagePath": "./out/LowPowerCounter/default.elf",
+            "toolProperties": "default-tool-base",
+            "tool": "PICkit 4",
+            "packs": [
+                {
+                    "name": "PIC16F1xxxx_DFP",
+                    "vendor": "Microchip",
+                    "version": "1.29.444"
+                }
+            ],
+            "fileSet": "default",
+            "toolchain": "default-XC8"
+        }
+    ],
+    "propertyGroups": [
+        {
+            "name": "default-XC8",
+            "type": "toolchain",
+            "provider": "microchip.toolchains:xc8@3.00",
+            "properties": {
+                "compiler.isolate-each-function": true,
+                "compiler.optimization-level": "-O1",
+                "compiler.place-data-into-section": true,
+                "linker.heap-size": "0",
+                "linker.remove-unused-sections": true,
+                "compiler++.isolate-each-function": true,
+                "compiler++.optimization-level": "-O1"
+            }
+        },
+        {
+            "name": "default-tool-base",
+            "type": "tool",
+            "properties": {
+                "poweroptions.powerenable": true,
+                "voltagevalue": "5"
+            }
+        }
+    ],
+    "fileSets": [
+        {
+            "name": "default",
+            "files": [
+                {
+                    "include": "**/*",
+                    "exclude": "**/(_build|out|cmake|.vscode)/**/*"
+                },
+                "default/mcc/mcc_generated_files/system/src/clock.c",
+                "default/mcc/mcc_generated_files/system/clock.h",
+                "default/mcc/mcc_generated_files/system/src/interrupt.c",
+                "default/mcc/mcc_generated_files/system/interrupt.h",
+                "default/mcc/mcc_generated_files/system/src/system.c",
+                "default/mcc/mcc_generated_files/system/system.h",
+                "default/mcc/mcc_generated_files/system/src/config_bits.c",
+                "default/mcc/mcc_generated_files/system/config_bits.h",
+                "default/mcc/main.c",
+                "default/mcc/mcc_generated_files/system/pins.h",
+                "default/mcc/mcc_generated_files/system/src/pins.c",
+                "default/mcc/mcc_generated_files/timer/tmr1_deprecated.h",
+                "default/mcc/mcc_generated_files/timer/tmr1.h",
+                "default/mcc/mcc_generated_files/timer/src/tmr1.c"
+            ]
+        }
+    ]
+}
