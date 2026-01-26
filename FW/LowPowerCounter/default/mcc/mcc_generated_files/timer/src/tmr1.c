@@ -54,7 +54,7 @@ void TMR1_Initialize(void)
 {
     T1CONbits.TMR1ON = 0U;
 	
-    TMR1H = 0x0;                       // Period 0 ns; Count 10
+    TMR1H = 0x0;                       // Period 2.04769 ms; Count 10
     TMR1L = 0xA;
 
     timer1ReloadVal=((uint16_t)TMR1H << 8U) | TMR1L;

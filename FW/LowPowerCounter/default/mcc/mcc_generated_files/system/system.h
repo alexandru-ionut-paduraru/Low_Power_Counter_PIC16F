@@ -40,9 +40,11 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include "config_bits.h"
-#include "../system/clock.h"
 #include "../system/pins.h"
+#include "../uart/eusart.h"
+#include "../peripheral/power.h"
 #include "../system/interrupt.h"
+#include "../system/clock.h"
 #include "../timer/tmr1.h"
 
 /**

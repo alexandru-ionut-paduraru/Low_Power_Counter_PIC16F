@@ -56,7 +56,7 @@
  * @brief Defines the TMR1 prescaled frequency in hertz.
  */
  /* cppcheck-suppress misra-c2012-2.5 */
-#define TMR1_CLOCK_FREQ (0UL)
+#define TMR1_CLOCK_FREQ (32000000UL)
 /**
  * @ingroup tmr1
  * @brief Defines the Custom Name for the \ref TMR1_Initialize API

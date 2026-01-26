@@ -1,4 +1,4 @@
- /*
+/*
  * MAIN Generated Driver File
  * 
  * @file main.c
@@ -34,26 +34,34 @@
 #include "mcc_generated_files/system/pins.h"
 #include "mcc_generated_files/system/system.h"
 #include "mcc_generated_files/timer/tmr1.h"
+#include "mcc_generated_files/power/power.h"
 
 /*
     Main application
 */
+uint8_t dataSent=0;
 
 void TMR1_CB(void){
     static uint16_t led_count=0;
     led_count++;
     if(led_count>=10){
         led_count=0;
-        // LED_Toggle();
+
+        // TO DO - delete the fallowing test lines of code
+        dataSent=1;
     }
 }
 
 void INT_CB(void){
-    LED_Toggle();
+    POWER_PeripheralEnable(POWER_TMR1);
+    // LED_Toggle();
 }
 
 int main(void)
 {
+    static uint8_t state=0;
+    static uint32_t counter=0;
+    static uint32_t sendData_counter=0;
     SYSTEM_Initialize();
 
     // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts 
@@ -77,7 +85,44 @@ int main(void)
     EXT_INT_InterruptEnable();
     INT_SetInterruptHandler(&INT_CB);
     TMR1_Start();
+    LED_SetHigh();
     while(1)
     {
+        switch(state){
+            case 0:{//wait to power off the LED
+                if(dataSent==1){
+                    LED_SetLow();
+                    dataSent=0; //flag clear
+                    state=1;
+                }
+                break;
+            }
+            case 1:{ //Initial State
+                POWER_PeripheralDisable(POWER_TMR1);
+                POWER_LowPowerModeEnter();
+                //the program will continue when a pulse is received
+                counter++;
+                sendData_counter++;
+                if (sendData_counter>=5){
+                    sendData_counter=0;
+                    state=2;
+                }
+                break;
+            }
+            case 2:{ //send data
+                LED_SetHigh();
+                TMR1_Start();
+                state=3;
+                break;
+            }
+            case 3:{//wait data transmission to end
+                if(dataSent==1){
+                    LED_SetLow();
+                    dataSent=0; //flag clear
+                    state=1;
+                }
+                break;
+            }
+        }
     }    
 }

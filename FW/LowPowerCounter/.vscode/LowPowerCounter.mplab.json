@@ -39,7 +39,7 @@
             "type": "tool",
             "properties": {
                 "poweroptions.powerenable": true,
-                "voltagevalue": "5"
+                "voltagevalue": "3.3"
             }
         }
     ],
@@ -64,7 +64,15 @@
                 "default/mcc/mcc_generated_files/system/src/pins.c",
                 "default/mcc/mcc_generated_files/timer/tmr1_deprecated.h",
                 "default/mcc/mcc_generated_files/timer/tmr1.h",
-                "default/mcc/mcc_generated_files/timer/src/tmr1.c"
+                "default/mcc/mcc_generated_files/timer/src/tmr1.c",
+                "default/mcc/mcc_generated_files/uart/uart_drv_interface.h",
+                "default/mcc/mcc_generated_files/uart/eusart.h",
+                "default/mcc/mcc_generated_files/uart/uart_types.h",
+                "default/mcc/mcc_generated_files/uart/src/eusart.c",
+                "default/mcc/mcc_generated_files/power/src/power.c",
+                "default/mcc/mcc_generated_files/power/power.h",
+                "default/mcc/mcc_generated_files/peripheral/src/power.c",
+                "default/mcc/mcc_generated_files/peripheral/power.h"
             ]
         }
     ]

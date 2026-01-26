@@ -1,17 +1,3 @@
-/**
- * CLOCK Generated Driver Source File
- * 
- * @file clock.c
- * 
- * @ingroup clockdriver 
- * 
- * @brief This file contains the API prototypes for the Clock driver.
- *
- * @version Driver Version 2.0.4
- *
- * @version Package Version 4.3.7
-*/
-
 /*
 © [2026] Microchip Technology Inc. and its subsidiaries.
 
@@ -34,25 +20,12 @@
 */
 
 #include <xc.h>
-#include "../clock.h"
+#include "../power.h"
 
-void CLOCK_Initialize(void)
-{
-    // Set the CLOCK CONTROL module to the options selected in the user interface.
-    OSCCON1 = (0 << _OSCCON1_NDIV_POSN)   // NDIV 1
-        | (6 << _OSCCON1_NOSC_POSN);  // NOSC HFINTOSC
-    OSCCON3 = (0 << _OSCCON3_SOSCPWR_POSN)   // SOSCPWR Low power
-        | (0 << _OSCCON3_CSWHOLD_POSN);  // CSWHOLD may proceed
-    OSCEN = (0 << _OSCEN_EXTOEN_POSN)   // EXTOEN disabled
-        | (0 << _OSCEN_HFOEN_POSN)   // HFOEN disabled
-        | (0 << _OSCEN_LFOEN_POSN)   // LFOEN disabled
-        | (0 << _OSCEN_SOSCEN_POSN)   // SOSCEN disabled
-        | (0 << _OSCEN_ADOEN_POSN);  // ADOEN disabled
-    OSCFRQ = (7 << _OSCFRQ_HFFRQ_POSN);  // HFFRQ 32_MHz
-    OSCSTAT1 = 
-    OSCTUNE = (0 << _OSCTUNE_HFTUN_POSN);  // HFTUN 0x0
-
+// Set the POWER module to the options selected in the user interface.
+void POWER_Initialize(void) {
+    // VREGPM Low-Power Sleep Mode; 
+    VREGCON = 0x2;
+    // IDLEN Sleep mode; DOZEN Normal mode; ROI Entering ISR does not change DOZEN; DOE Exiting ISR does not change DOZEN; DOZE 1:2; 
+    CPUDOZE = 0x0;
 }
-/**
- End of File
-*/
