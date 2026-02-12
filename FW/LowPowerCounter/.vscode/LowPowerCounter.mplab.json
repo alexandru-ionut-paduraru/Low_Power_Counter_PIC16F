@@ -72,7 +72,10 @@
                 "default/mcc/mcc_generated_files/power/src/power.c",
                 "default/mcc/mcc_generated_files/power/power.h",
                 "default/mcc/mcc_generated_files/peripheral/src/power.c",
-                "default/mcc/mcc_generated_files/peripheral/power.h"
+                "default/mcc/mcc_generated_files/peripheral/power.h",
+                "default/mcc/mcc_generated_files/timer/src/tmr2.c",
+                "default/mcc/mcc_generated_files/timer/tmr2.h",
+                "default/mcc/mcc_generated_files/timer/tmr2_deprecated.h"
             ]
         }
     ]

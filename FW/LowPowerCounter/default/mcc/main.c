@@ -35,12 +35,13 @@
 #include "mcc_generated_files/system/system.h"
 #include "mcc_generated_files/timer/tmr1.h"
 #include "mcc_generated_files/power/power.h"
+#include "mcc_generated_files/timer/tmr2_deprecated.h"
 
 /*
     Main application
 */
 uint8_t dataSent=0;
-
+uint8_t tmr2_event=0;
 void TMR1_CB(void){
     static uint16_t led_count=0;
     led_count++;
@@ -50,6 +51,11 @@ void TMR1_CB(void){
         // TO DO - delete the fallowing test lines of code
         dataSent=1;
     }
+}
+
+void TMR2_CB(void){
+    tmr2_event=1;
+    POWER_PeripheralDisable(POWER_TMR2);
 }
 
 void INT_CB(void){
@@ -80,11 +86,16 @@ int main(void)
     // Disable the Peripheral Interrupts 
     //INTERRUPT_PeripheralInterruptDisable(); 
 
+    POWER_PeripheralDisableAll();
+    POWER_PeripheralEnable(POWER_TMR1);
+    POWER_PeripheralEnable(POWER_TMR2);
+    POWER_PeripheralEnable(POWER_IOC);
     TMR1_TMRInterruptEnable();
     TMR1_OverflowCallbackRegister(&TMR1_CB);
     EXT_INT_InterruptEnable();
     INT_SetInterruptHandler(&INT_CB);
     TMR1_Start();
+    TMR2_OverflowCallbackRegister(&TMR2_CB);
     LED_SetHigh();
     while(1)
     {
@@ -106,6 +117,10 @@ int main(void)
                 if (sendData_counter>=5){
                     sendData_counter=0;
                     state=2;
+                }else{
+                    POWER_PeripheralEnable(POWER_TMR2);
+                    TMR2_Start();
+                    state=5; //prevent next pulse within 30ms
                 }
                 break;
             }
@@ -119,6 +134,15 @@ int main(void)
                 if(dataSent==1){
                     LED_SetLow();
                     dataSent=0; //flag clear
+                    state=1;
+                }
+                break;
+            }
+            case 5:{ //wait timer 2 to expire
+                // POWER_LowPowerModeEnter();
+                //when exiting power mode
+                if (tmr2_event==1){
+                    tmr2_event=0;
                     state=1;
                 }
                 break;

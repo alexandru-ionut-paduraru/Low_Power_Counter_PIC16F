@@ -46,6 +46,7 @@
 #include "../system/interrupt.h"
 #include "../system/clock.h"
 #include "../timer/tmr1.h"
+#include "../timer/tmr2.h"
 
 /**
  * @ingroup systemdriver

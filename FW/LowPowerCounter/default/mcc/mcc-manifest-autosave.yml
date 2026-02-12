@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: N/A
-creation_date: 2026-01-27T00:26:21.437+02:00[Europe/Athens]
+creation_date: 2026-01-29T00:07:24.805+02:00[Europe/Athens]
 operating_system: Windows 11
 mcc_mode: VSCodePlugin
 mcc_mode_version: Unknown
@@ -29,4 +29,5 @@ modules:
 - {name: '@mchp-mcc/scf-pic8-osc-v1', type: MELODY, version: 4.4.0}
 - {name: '@mchp-mcc/scf-pic8-pmd-v4', type: MELODY, version: 1.0.3}
 - {name: '@mchp-mcc/scf-pic8-tmr1-v2', type: MELODY, version: 2.1.0}
+- {name: '@mchp-mcc/scf-pic8-tmr2-v2', type: MELODY, version: 2.0.0}
 - {name: '@mchp-mcc/uart-driver', type: MELODY, version: 1.10.3}

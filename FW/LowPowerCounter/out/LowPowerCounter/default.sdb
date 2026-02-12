@@ -3,8 +3,8 @@
 [d edition pro ]
 [d chip 16F18345 ]
 [d frameptr 6 ]
-"56 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\main.c
-[e E7168 . `ui
+"58 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\main.c
+[e E7186 . `ui
 POWER_IOC 1
 POWER_CLKR 2
 POWER_NVM 4
@@ -39,7 +39,7 @@ POWER_CLC2 1284
 POWER_CLC3 1288
 POWER_CLC4 1296
 ]
-"54 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\power\src\power.c
+"54 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\power\src\power.c
 [e E6658 . `ui
 POWER_IOC 1
 POWER_CLKR 2
@@ -83,41 +83,47 @@ POWER_CLC4 1296
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"44 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\main.c
+"45 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\main.c
 [v _TMR1_CB TMR1_CB `(v  1 e 1 0 ]
-"55
+"56
+[v _TMR2_CB TMR2_CB `(v  1 e 1 0 ]
+"61
 [v _INT_CB INT_CB `(v  1 e 1 0 ]
-"60
+"66
 [v _main main `(i  1 e 2 0 ]
-"26 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\peripheral\src\power.c
+"26 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\peripheral\src\power.c
 [v _POWER_Initialize POWER_Initialize `(v  1 e 1 0 ]
-"47 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\power\src\power.c
+"47 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\power\src\power.c
 [v _POWER_LowPowerModeEnter POWER_LowPowerModeEnter `(v  1 e 1 0 ]
 "54
 [v _POWER_PeripheralEnable POWER_PeripheralEnable `(a  1 e 1 0 ]
+[v i1_POWER_PeripheralEnable POWER_PeripheralEnable `(a  1 e 1 0 ]
 "91
 [v _POWER_PeripheralDisable POWER_PeripheralDisable `(a  1 e 1 0 ]
-"39 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\clock.c
+[v i1_POWER_PeripheralDisable POWER_PeripheralDisable `(a  1 e 1 0 ]
+"128
+[v _POWER_PeripheralDisableAll POWER_PeripheralDisableAll `(v  1 e 1 0 ]
+"39 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\clock.c
 [v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
-"40 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\interrupt.c
+"40 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\interrupt.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 "59
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
-"91
+"95
 [v _INT_ISR INT_ISR `(v  1 e 1 0 ]
-"100
+"104
 [v _INT_CallBack INT_CallBack `(v  1 e 1 0 ]
-"109
-[v _INT_SetInterruptHandler INT_SetInterruptHandler `(v  1 e 1 0 ]
 "113
+[v _INT_SetInterruptHandler INT_SetInterruptHandler `(v  1 e 1 0 ]
+"117
 [v _INT_DefaultInterruptHandler INT_DefaultInterruptHandler `(v  1 e 1 0 ]
-"38 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\pins.c
+"38 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\pins.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"47 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\system.c
+"47 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"58
+"59
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
-"53 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\timer\src\tmr1.c
+"53 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\timer\src\tmr1.c
 [v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
 "96
 [v _TMR1_Start TMR1_Start `(v  1 e 1 0 ]
@@ -133,7 +139,17 @@ POWER_CLC4 1296
 [v _TMR1_DefaultOverflowCallback TMR1_DefaultOverflowCallback `(v  1 s 1 TMR1_DefaultOverflowCallback ]
 "231
 [v _TMR1_DefaultGateCallback TMR1_DefaultGateCallback `(v  1 s 1 TMR1_DefaultGateCallback ]
-"131 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\uart\src\eusart.c
+"45 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\timer\src\tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"69
+[v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
+"114
+[v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
+"124
+[v _TMR2_PeriodMatchCallbackRegister TMR2_PeriodMatchCallbackRegister `(v  1 e 1 0 ]
+"129
+[v _TMR2_DefaultPeriodMatchCallback TMR2_DefaultPeriodMatchCallback `(v  1 s 1 TMR2_DefaultPeriodMatchCallback ]
+"131 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\uart\src\eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
 "167
 [v _EUSART_Deinitialize EUSART_Deinitialize `(v  1 e 1 0 ]
@@ -173,23 +189,23 @@ POWER_CLC4 1296
 [v _EUSART_RxCompleteCallbackRegister EUSART_RxCompleteCallbackRegister `(v  1 e 1 0 ]
 "454
 [v _EUSART_TxCompleteCallbackRegister EUSART_TxCompleteCallbackRegister `(v  1 e 1 0 ]
-[s S65 . 1 `uc 1 INTEDG 1 0 :1:0 
+[s S70 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-"362 c:\PROGRA~1\MICROC~1\xc8\v3.00\pic\include\proc/pic16f18345.h
-[u S70 . 1 `S65 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES70  1 e 1 @11 ]
-[s S227 . 1 `uc 1 INTF 1 0 :1:0 
+"348 C:/Users/M68336/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.29.444/xc8\pic\include\proc/pic16f18345.h
+[u S75 . 1 `S70 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES75  1 e 1 @11 ]
+[s S243 . 1 `uc 1 INTF 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIF 1 0 :1:4 
 `uc 1 TMR0IF 1 0 :1:5 
 ]
-"546
-[u S232 . 1 `S227 1 . 1 0 ]
-[v _PIR0bits PIR0bits `VES232  1 e 1 @16 ]
-[s S287 . 1 `uc 1 TMR1IF 1 0 :1:0 
+"532
+[u S248 . 1 `S243 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES248  1 e 1 @16 ]
+[s S303 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 BCL1IF 1 0 :1:2 
 `uc 1 SSP1IF 1 0 :1:3 
@@ -198,34 +214,34 @@ POWER_CLC4 1296
 `uc 1 ADIF 1 0 :1:6 
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
-"583
-[u S296 . 1 `S287 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES296  1 e 1 @17 ]
-"1255
+"569
+[u S312 . 1 `S303 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES312  1 e 1 @17 ]
+"1241
 [v _TMR1L TMR1L `VEuc  1 e 1 @25 ]
-"1275
+"1261
 [v _TMR1H TMR1H `VEuc  1 e 1 @26 ]
-"1295
+"1281
 [v _T1CON T1CON `VEuc  1 e 1 @27 ]
-[s S427 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S451 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 T1SYNC 1 0 :1:2 
 `uc 1 T1SOSC 1 0 :1:3 
 `uc 1 T1CKPS 1 0 :2:4 
 `uc 1 TMR1CS 1 0 :2:6 
 ]
-"1317
-[s S434 . 1 `uc 1 . 1 0 :4:0 
+"1303
+[s S458 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 T1CKPS0 1 0 :1:4 
 `uc 1 T1CKPS1 1 0 :1:5 
 `uc 1 TMR1CS0 1 0 :1:6 
 `uc 1 TMR1CS1 1 0 :1:7 
 ]
-[u S440 . 1 `S427 1 . 1 0 `S434 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES440  1 e 1 @27 ]
-"1367
+[u S464 . 1 `S451 1 . 1 0 `S458 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES464  1 e 1 @27 ]
+"1353
 [v _T1GCON T1GCON `VEuc  1 e 1 @28 ]
-[s S493 . 1 `uc 1 T1GSS 1 0 :2:0 
+[s S517 . 1 `uc 1 T1GSS 1 0 :2:0 
 `uc 1 T1GVAL 1 0 :1:2 
 `uc 1 T1GGO_nDONE 1 0 :1:3 
 `uc 1 T1GSPM 1 0 :1:4 
@@ -233,27 +249,48 @@ POWER_CLC4 1296
 `uc 1 T1GPOL 1 0 :1:6 
 `uc 1 TMR1GE 1 0 :1:7 
 ]
-"1387
-[s S501 . 1 `uc 1 T1GSS0 1 0 :1:0 
+"1373
+[s S525 . 1 `uc 1 T1GSS0 1 0 :1:0 
 `uc 1 T1GSS1 1 0 :1:1 
 ]
-[u S504 . 1 `S493 1 . 1 0 `S501 1 . 1 0 ]
-[v _T1GCONbits T1GCONbits `VES504  1 e 1 @28 ]
-"1548
+[u S528 . 1 `S517 1 . 1 0 `S525 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES528  1 e 1 @28 ]
+"1423
+[v _TMR2 TMR2 `VEuc  1 e 1 @29 ]
+"1443
+[v _PR2 PR2 `VEuc  1 e 1 @30 ]
+"1463
+[v _T2CON T2CON `VEuc  1 e 1 @31 ]
+[s S631 . 1 `uc 1 T2CKPS 1 0 :2:0 
+`uc 1 TMR2ON 1 0 :1:2 
+`uc 1 T2OUTPS 1 0 :4:3 
+]
+"1484
+[s S635 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+`uc 1 T2CKPS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 T2OUTPS0 1 0 :1:3 
+`uc 1 T2OUTPS1 1 0 :1:4 
+`uc 1 T2OUTPS2 1 0 :1:5 
+`uc 1 T2OUTPS3 1 0 :1:6 
+]
+[u S643 . 1 `S631 1 . 1 0 `S635 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES643  1 e 1 @31 ]
+"1534
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
-"1593
+"1579
 [v _TRISB TRISB `VEuc  1 e 1 @141 ]
-"1632
+"1618
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S88 . 1 `uc 1 INTE 1 0 :1:0 
+[s S97 . 1 `uc 1 INTE 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIE 1 0 :1:4 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
-"1707
-[u S93 . 1 `S88 1 . 1 0 ]
-[v _PIE0bits PIE0bits `VES93  1 e 1 @144 ]
-[s S266 . 1 `uc 1 TMR1IE 1 0 :1:0 
+"1693
+[u S102 . 1 `S97 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES102  1 e 1 @144 ]
+[s S282 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 BCL1IE 1 0 :1:2 
 `uc 1 SSP1IE 1 0 :1:3 
@@ -262,43 +299,43 @@ POWER_CLC4 1296
 `uc 1 ADIE 1 0 :1:6 
 `uc 1 TMR1GIE 1 0 :1:7 
 ]
-"1744
-[u S275 . 1 `S266 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES275  1 e 1 @145 ]
-"2291
+"1730
+[u S291 . 1 `S282 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES291  1 e 1 @145 ]
+"2277
 [v _LATA LATA `VEuc  1 e 1 @268 ]
-"2336
+"2322
 [v _LATB LATB `VEuc  1 e 1 @269 ]
-[s S111 . 1 `uc 1 . 1 0 :4:0 
+[s S126 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 LATB4 1 0 :1:4 
 `uc 1 LATB5 1 0 :1:5 
 `uc 1 LATB6 1 0 :1:6 
 `uc 1 LATB7 1 0 :1:7 
 ]
-"2350
-[u S117 . 1 `S111 1 . 1 0 ]
-[v _LATBbits LATBbits `VES117  1 e 1 @269 ]
-"2375
+"2336
+[u S132 . 1 `S126 1 . 1 0 ]
+[v _LATBbits LATBbits `VES132  1 e 1 @269 ]
+"2361
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-"2930
+"2916
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
-"2975
+"2961
 [v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
-"3014
+"3000
 [v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
-"3076
+"3062
 [v _VREGCON VREGCON `VEuc  1 e 1 @407 ]
-"3097
+"3083
 [v _RC1REG RC1REG `VEuc  1 e 1 @409 ]
-"3151
+"3137
 [v _TX1REG TX1REG `VEuc  1 e 1 @410 ]
-"3217
+"3203
 [v _SP1BRGL SP1BRGL `VEuc  1 e 1 @411 ]
-"3271
+"3257
 [v _SP1BRGH SP1BRGH `VEuc  1 e 1 @412 ]
-"3325
+"3311
 [v _RC1STA RC1STA `VEuc  1 e 1 @413 ]
-[s S808 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S917 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -307,12 +344,12 @@ POWER_CLC4 1296
 `uc 1 RX9 1 0 :1:6 
 `uc 1 SPEN 1 0 :1:7 
 ]
-"3351
-[u S817 . 1 `S808 1 . 1 0 ]
-[v _RC1STAbits RC1STAbits `VES817  1 e 1 @413 ]
-"3505
+"3337
+[u S926 . 1 `S917 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES926  1 e 1 @413 ]
+"3491
 [v _TX1STA TX1STA `VEuc  1 e 1 @414 ]
-[s S829 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S938 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -321,12 +358,12 @@ POWER_CLC4 1296
 `uc 1 TX9 1 0 :1:6 
 `uc 1 CSRC 1 0 :1:7 
 ]
-"3531
-[u S838 . 1 `S829 1 . 1 0 ]
-[v _TX1STAbits TX1STAbits `VES838  1 e 1 @414 ]
-"3685
+"3517
+[u S947 . 1 `S938 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES947  1 e 1 @414 ]
+"3671
 [v _BAUD1CON BAUD1CON `VEuc  1 e 1 @415 ]
-[s S850 . 1 `uc 1 ABDEN 1 0 :1:0 
+[s S959 . 1 `uc 1 ABDEN 1 0 :1:0 
 `uc 1 WUE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 BRG16 1 0 :1:3 
@@ -335,94 +372,98 @@ POWER_CLC4 1296
 `uc 1 RCIDL 1 0 :1:6 
 `uc 1 ABDOVF 1 0 :1:7 
 ]
-"3719
-[u S859 . 1 `S850 1 . 1 0 ]
-[v _BAUD1CONbits BAUD1CONbits `VES859  1 e 1 @415 ]
-"3931
+"3705
+[u S968 . 1 `S959 1 . 1 0 ]
+[v _BAUD1CONbits BAUD1CONbits `VES968  1 e 1 @415 ]
+"3917
 [v _WPUA WPUA `VEuc  1 e 1 @524 ]
-"3981
+"3967
 [v _WPUB WPUB `VEuc  1 e 1 @525 ]
-"4020
+"4006
 [v _WPUC WPUC `VEuc  1 e 1 @526 ]
-"6188
+"6174
 [v _ODCONA ODCONA `VEuc  1 e 1 @652 ]
-"6233
+"6219
 [v _ODCONB ODCONB `VEuc  1 e 1 @653 ]
-"6272
+"6258
 [v _ODCONC ODCONC `VEuc  1 e 1 @654 ]
-"6738
+"6724
 [v _SLRCONA SLRCONA `VEuc  1 e 1 @780 ]
-"6783
+"6769
 [v _SLRCONB SLRCONB `VEuc  1 e 1 @781 ]
-"6822
+"6808
 [v _SLRCONC SLRCONC `VEuc  1 e 1 @782 ]
-"7200
+"7186
 [v _INLVLA INLVLA `VEuc  1 e 1 @908 ]
-"7250
+"7236
 [v _INLVLB INLVLB `VEuc  1 e 1 @909 ]
-"7289
+"7275
 [v _INLVLC INLVLC `VEuc  1 e 1 @910 ]
-"7351
+"7337
 [v _IOCAP IOCAP `VEuc  1 e 1 @913 ]
-"7401
+"7387
 [v _IOCAN IOCAN `VEuc  1 e 1 @914 ]
-"7451
+"7437
 [v _IOCAF IOCAF `VEuc  1 e 1 @915 ]
-"7501
+"7487
 [v _IOCBP IOCBP `VEuc  1 e 1 @916 ]
-"7540
+"7526
 [v _IOCBN IOCBN `VEuc  1 e 1 @917 ]
-"7579
+"7565
 [v _IOCBF IOCBF `VEuc  1 e 1 @918 ]
-"7618
+"7604
 [v _IOCCP IOCCP `VEuc  1 e 1 @919 ]
-"7680
+"7666
 [v _IOCCN IOCCN `VEuc  1 e 1 @920 ]
-"7742
+"7728
 [v _IOCCF IOCCF `VEuc  1 e 1 @921 ]
-"12123
+"12109
 [v _PMD0 PMD0 `VEuc  1 e 1 @2321 ]
-"12168
+"12154
 [v _PMD1 PMD1 `VEuc  1 e 1 @2322 ]
-"12230
+"12216
 [v _PMD2 PMD2 `VEuc  1 e 1 @2323 ]
-"12270
+"12256
 [v _PMD3 PMD3 `VEuc  1 e 1 @2324 ]
-"12332
+"12318
 [v _PMD4 PMD4 `VEuc  1 e 1 @2325 ]
-"12366
+"12352
 [v _PMD5 PMD5 `VEuc  1 e 1 @2326 ]
-"12410
+"12396
 [v _CPUDOZE CPUDOZE `VEuc  1 e 1 @2328 ]
-"12475
+"12461
 [v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2329 ]
-"12615
+"12601
 [v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2331 ]
-"12660
+"12646
 [v _OSCSTAT1 OSCSTAT1 `VEuc  1 e 1 @2332 ]
-"12712
+"12698
 [v _OSCEN OSCEN `VEuc  1 e 1 @2333 ]
-"12758
+"12744
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2334 ]
-"12816
+"12802
 [v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2335 ]
-"12882
+"12868
 [v _INTPPS INTPPS `VEuc  1 e 1 @3600 ]
-"13870
+"13856
 [v _RXPPS RXPPS `VEuc  1 e 1 @3620 ]
-"14470
+"14456
 [v _RA5PPS RA5PPS `VEuc  1 e 1 @3733 ]
-"42 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\main.c
+"43 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\main.c
 [v _dataSent dataSent `uc  1 e 1 0 ]
-"38 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\interrupt.c
+"44
+[v _tmr2_event tmr2_event `uc  1 e 1 0 ]
+"38 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\interrupt.c
 [v _INT_InterruptHandler INT_InterruptHandler `*.37(v  1 e 2 0 ]
-"47 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\timer\src\tmr1.c
+"47 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\timer\src\tmr1.c
 [v _timer1ReloadVal timer1ReloadVal `VEus  1 s 2 timer1ReloadVal ]
 "48
 [v _TMR1_OverflowCallback TMR1_OverflowCallback `*.37(v  1 s 2 TMR1_OverflowCallback ]
 "50
 [v _TMR1_GateCallback TMR1_GateCallback `*.37(v  1 s 2 TMR1_GateCallback ]
-"83 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\uart\src\eusart.c
+"38 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\timer\src\tmr2.c
+[v _TMR2_PeriodMatchCallback TMR2_PeriodMatchCallback `*.37(v  1 s 2 TMR2_PeriodMatchCallback ]
+"83 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\uart\src\eusart.c
 [v _eusartTxHead eusartTxHead `VEuc  1 s 1 eusartTxHead ]
 "84
 [v _eusartTxTail eusartTxTail `VEuc  1 s 1 eusartTxTail ]
@@ -438,16 +479,16 @@ POWER_CLC4 1296
 [v _eusartRxCount eusartRxCount `VEuc  1 s 1 eusartRxCount ]
 "91
 [v _eusartRxBuffer eusartRxBuffer `VE[8]uc  1 s 8 eusartRxBuffer ]
-[s S757 . 1 `uc 1 perr 1 0 :1:0 
+[s S866 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
 "97
-[u S762 . 2 `S757 1 . 1 0 `ui 1 status 2 0 ]
-[v _eusartRxStatusBuffer eusartRxStatusBuffer `VE[8]S762  1 s 16 eusartRxStatusBuffer ]
+[u S871 . 2 `S866 1 . 1 0 `ui 1 status 2 0 ]
+[v _eusartRxStatusBuffer eusartRxStatusBuffer `VE[8]S871  1 s 16 eusartRxStatusBuffer ]
 "104
-[v _eusartRxLastError eusartRxLastError `VES762  1 s 2 eusartRxLastError ]
+[v _eusartRxLastError eusartRxLastError `VES871  1 s 2 eusartRxLastError ]
 "110
 [v _EUSART_TxInterruptHandler EUSART_TxInterruptHandler `*.37(v  1 e 2 0 ]
 "112
@@ -460,18 +501,29 @@ POWER_CLC4 1296
 [v _EUSART_FramingErrorHandler EUSART_FramingErrorHandler `*.37(v  1 s 2 EUSART_FramingErrorHandler ]
 "118
 [v _EUSART_OverrunErrorHandler EUSART_OverrunErrorHandler `*.37(v  1 s 2 EUSART_OverrunErrorHandler ]
-"60 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\main.c
+"66 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"62
+"68
 [v main@state state `uc  1 s 1 state ]
-"63
+"69
 [v main@counter counter `ul  1 s 4 counter ]
-"64
+"70
 [v main@sendData_counter sendData_counter `ul  1 s 4 sendData_counter ]
-"128
+"152
 } 0
-"96 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\timer\src\tmr1.c
+"69 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\timer\src\tmr2.c
+[v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
+{
+"72
+} 0
+"124
+[v _TMR2_PeriodMatchCallbackRegister TMR2_PeriodMatchCallbackRegister `(v  1 e 1 0 ]
+{
+[v TMR2_PeriodMatchCallbackRegister@CallbackHandler CallbackHandler `*.37(v  1 p 2 0 ]
+"127
+} 0
+"96 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\timer\src\tmr1.c
 [v _TMR1_Start TMR1_Start `(v  1 e 1 0 ]
 {
 "99
@@ -487,43 +539,48 @@ POWER_CLC4 1296
 [v TMR1_OverflowCallbackRegister@CallbackHandler CallbackHandler `*.37(v  1 p 2 0 ]
 "219
 } 0
-"47 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\system.c
+"47 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"56
+"57
 } 0
-"53 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\timer\src\tmr1.c
+"45 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\timer\src\tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"57
+} 0
+"53 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\timer\src\tmr1.c
 [v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
 {
 "79
 } 0
-"26 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\peripheral\src\power.c
+"26 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\peripheral\src\power.c
 [v _POWER_Initialize POWER_Initialize `(v  1 e 1 0 ]
 {
 "31
 } 0
-"58 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\system.c
+"59 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\system.c
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 {
-"72
+"73
 } 0
-"38 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\pins.c
+"38 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\pins.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "113
 } 0
-"40 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\interrupt.c
+"40 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\interrupt.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 {
 "50
 } 0
-"109
+"113
 [v _INT_SetInterruptHandler INT_SetInterruptHandler `(v  1 e 1 0 ]
 {
 [v INT_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
-"111
+"115
 } 0
-"131 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\uart\src\eusart.c
+"131 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\uart\src\eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
 {
 "165
@@ -540,12 +597,28 @@ POWER_CLC4 1296
 [v EUSART_FramingErrorCallbackRegister@callbackHandler callbackHandler `*.37(v  1 p 2 0 ]
 "436
 } 0
-"39 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\clock.c
+"39 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\clock.c
 [v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
 {
 "55
 } 0
-"91 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\power\src\power.c
+"54 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\power\src\power.c
+[v _POWER_PeripheralEnable POWER_PeripheralEnable `(a  1 e 1 0 ]
+{
+"56
+[v POWER_PeripheralEnable@settingData settingData `uc  1 a 1 3 ]
+"55
+[v POWER_PeripheralEnable@registerData registerData `uc  1 a 1 2 ]
+"54
+[v POWER_PeripheralEnable@peripheral peripheral `E6658  1 p 2 0 ]
+"89
+} 0
+"128
+[v _POWER_PeripheralDisableAll POWER_PeripheralDisableAll `(v  1 e 1 0 ]
+{
+"135
+} 0
+"91
 [v _POWER_PeripheralDisable POWER_PeripheralDisable `(a  1 e 1 0 ]
 {
 "93
@@ -561,24 +634,50 @@ POWER_CLC4 1296
 {
 "51
 } 0
-"59 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\interrupt.c
+"59 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\interrupt.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
-"89
+"93
 } 0
-"203 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\timer\src\tmr1.c
+"114 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\timer\src\tmr2.c
+[v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
+{
+"122
+} 0
+"56 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\main.c
+[v _TMR2_CB TMR2_CB `(v  1 e 1 0 ]
+{
+"59
+} 0
+"129 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\timer\src\tmr2.c
+[v _TMR2_DefaultPeriodMatchCallback TMR2_DefaultPeriodMatchCallback `(v  1 s 1 TMR2_DefaultPeriodMatchCallback ]
+{
+"132
+} 0
+"91 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\power\src\power.c
+[v i1_POWER_PeripheralDisable POWER_PeripheralDisable `(a  1 e 1 0 ]
+{
+"93
+[v i1POWER_PeripheralDisable@settingData settingData `uc  1 a 1 3 ]
+"92
+[v i1POWER_PeripheralDisable@registerData registerData `uc  1 a 1 2 ]
+"91
+[v i1POWER_PeripheralDisable@peripheral peripheral `E6658  1 p 2 0 ]
+"126
+} 0
+"203 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\timer\src\tmr1.c
 [v _TMR1_OverflowISR TMR1_OverflowISR `(v  1 e 1 0 ]
 {
 "214
 } 0
-"44 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\main.c
+"45 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\main.c
 [v _TMR1_CB TMR1_CB `(v  1 e 1 0 ]
 {
-"45
+"46
 [v TMR1_CB@led_count led_count `us  1 s 2 led_count ]
-"53
+"54
 } 0
-"221 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\timer\src\tmr1.c
+"221 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\timer\src\tmr1.c
 [v _TMR1_DefaultOverflowCallback TMR1_DefaultOverflowCallback `(v  1 s 1 TMR1_DefaultOverflowCallback ]
 {
 "224
@@ -592,38 +691,38 @@ POWER_CLC4 1296
 [v TMR1_CounterSet@timerVal timerVal `us  1 p 2 0 ]
 "138
 } 0
-"91 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\interrupt.c
+"95 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\interrupt.c
 [v _INT_ISR INT_ISR `(v  1 e 1 0 ]
 {
-"97
+"101
 } 0
-"100
+"104
 [v _INT_CallBack INT_CallBack `(v  1 e 1 0 ]
 {
-"107
+"111
 } 0
-"55 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\main.c
+"61 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\main.c
 [v _INT_CB INT_CB `(v  1 e 1 0 ]
 {
-"58
+"64
 } 0
-"113 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\interrupt.c
+"117 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\system\src\interrupt.c
 [v _INT_DefaultInterruptHandler INT_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"116
+"120
 } 0
-"54 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\power\src\power.c
-[v _POWER_PeripheralEnable POWER_PeripheralEnable `(a  1 e 1 0 ]
+"54 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\power\src\power.c
+[v i1_POWER_PeripheralEnable POWER_PeripheralEnable `(a  1 e 1 0 ]
 {
 "56
-[v POWER_PeripheralEnable@settingData settingData `uc  1 a 1 3 ]
+[v i1POWER_PeripheralEnable@settingData settingData `uc  1 a 1 3 ]
 "55
-[v POWER_PeripheralEnable@registerData registerData `uc  1 a 1 2 ]
+[v i1POWER_PeripheralEnable@registerData registerData `uc  1 a 1 2 ]
 "54
-[v POWER_PeripheralEnable@peripheral peripheral `E6658  1 p 2 0 ]
+[v i1POWER_PeripheralEnable@peripheral peripheral `E6658  1 p 2 0 ]
 "89
 } 0
-"377 D:\Developer\2026\LowPowerCounter\FW\LowPowerCounter\default\mcc\mcc_generated_files\uart\src\eusart.c
+"377 C:\Users\M68336\Documents\MCHP_Projects\2026\LowPowerCounter_Git\Low_Power_Counter_PIC16F\FW\LowPowerCounter\default\mcc\mcc_generated_files\uart\src\eusart.c
 [v _EUSART_TransmitISR EUSART_TransmitISR `(v  1 e 1 0 ]
 {
 "379
