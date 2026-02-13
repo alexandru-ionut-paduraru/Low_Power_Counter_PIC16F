@@ -1,17 +1,3 @@
-/**
- * System Driver Header File
- * 
- * @file system.h
- * 
- * @defgroup systemdriver System Driver
- * 
- * @brief This file contains the API prototype for the System driver.
- *
- * @version Driver Version 1.0.1
- *
- * @version Package Version 1.0.1
-*/
-
 /*
 © [2026] Microchip Technology Inc. and its subsidiaries.
 
@@ -33,33 +19,4 @@
     THIS SOFTWARE.
 */
 
-#ifndef SYSTEM_H
-#define	SYSTEM_H
-
-#include <xc.h>
-#include <stdint.h>
-#include <stdbool.h>
-#include "config_bits.h"
-#include "../system/pins.h"
-#include "../uart/eusart.h"
-#include "../peripheral/mssp1.h"
-#include "../peripheral/power.h"
-#include "../spi/mssp2.h"
-#include "../system/interrupt.h"
-#include "../system/clock.h"
-#include "../timer/tmr1.h"
-#include "../timer/tmr2.h"
-
-/**
- * @ingroup systemdriver
- * @brief Initializes the system module.
- * This routine is called only once during system initialization, before calling other APIs.
- * @param None.
- * @return None.
-*/
-void SYSTEM_Initialize(void);
-
-#endif	/* SYSTEM_H */
-/**
- End of File
-*/
+void MSSP1_Initialize(void);

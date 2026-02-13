@@ -1,17 +1,3 @@
-/**
- * System Driver Header File
- * 
- * @file system.h
- * 
- * @defgroup systemdriver System Driver
- * 
- * @brief This file contains the API prototype for the System driver.
- *
- * @version Driver Version 1.0.1
- *
- * @version Package Version 1.0.1
-*/
-
 /*
 © [2026] Microchip Technology Inc. and its subsidiaries.
 
@@ -33,33 +19,23 @@
     THIS SOFTWARE.
 */
 
-#ifndef SYSTEM_H
-#define	SYSTEM_H
-
 #include <xc.h>
-#include <stdint.h>
-#include <stdbool.h>
-#include "config_bits.h"
-#include "../system/pins.h"
-#include "../uart/eusart.h"
-#include "../peripheral/mssp1.h"
-#include "../peripheral/power.h"
-#include "../spi/mssp2.h"
-#include "../system/interrupt.h"
-#include "../system/clock.h"
-#include "../timer/tmr1.h"
-#include "../timer/tmr2.h"
+#include "../mssp1.h"
 
-/**
- * @ingroup systemdriver
- * @brief Initializes the system module.
- * This routine is called only once during system initialization, before calling other APIs.
- * @param None.
- * @return None.
-*/
-void SYSTEM_Initialize(void);
-
-#endif	/* SYSTEM_H */
-/**
- End of File
-*/
+// Set the MSSP1 module to the options selected in the user interface.
+void MSSP1_Initialize(void) {
+    // SMP High Speed; CKE disabled; 
+    SSP1STAT = 0x0;
+    // SSPEN disabled; CKP Idle:Low, Active:High; SSPM FOSC/4; 
+    SSP1CON1 = 0x0;
+    // GCEN disabled; ACKDT acknowledge; ACKEN disabled; RCEN disabled; PEN disabled; RSEN disabled; SEN disabled; 
+    SSP1CON2 = 0x0;
+    // PCIE disabled; SCIE disabled; BOEN disabled; SDAHT 100ns; SBCDE disabled; AHEN disabled; DHEN disabled; 
+    SSP1CON3 = 0x0;
+    // SSPMSK 0xff; 
+    SSP1MSK = 0xFF;
+    // SSPBUF 0x0; 
+    SSP1BUF = 0x0;
+    // SSPADD 0x0; 
+    SSP1ADD = 0x0;
+}

@@ -1,15 +1,13 @@
 /**
- * System Driver Header File
- * 
- * @file system.h
- * 
- * @defgroup systemdriver System Driver
- * 
- * @brief This file contains the API prototype for the System driver.
+ * SPI Type Definitions Header File
  *
- * @version Driver Version 1.0.1
+ * @file spi_polling_types.h
  *
- * @version Package Version 1.0.1
+ * @defgroup spi SPI
+ *
+ * @brief This header file provides type definitions for the SPI module operation in Polling mode.
+ *
+ * @version SPI Driver Version v5.0.0
 */
 
 /*
@@ -33,33 +31,22 @@
     THIS SOFTWARE.
 */
 
-#ifndef SYSTEM_H
-#define	SYSTEM_H
+#ifndef SPI_POLLING_TYPES_H
+#define	SPI_POLLING_TYPES_H
 
-#include <xc.h>
-#include <stdint.h>
-#include <stdbool.h>
-#include "config_bits.h"
-#include "../system/pins.h"
-#include "../uart/eusart.h"
-#include "../peripheral/mssp1.h"
-#include "../peripheral/power.h"
-#include "../spi/mssp2.h"
-#include "../system/interrupt.h"
-#include "../system/clock.h"
-#include "../timer/tmr1.h"
-#include "../timer/tmr2.h"
 
 /**
- * @ingroup systemdriver
- * @brief Initializes the system module.
- * This routine is called only once during system initialization, before calling other APIs.
- * @param None.
- * @return None.
-*/
-void SYSTEM_Initialize(void);
+ * @ingroup spi
+ * @typedef struct spi_configuration_t
+ * @brief Holds register configurations for SPI module.
+ */
+typedef struct {  
+    uint8_t stat;
+    uint8_t con1;
+    uint8_t con3;
+    uint8_t baud;
+    uint8_t clock;
+} spi_configuration_t;
 
-#endif	/* SYSTEM_H */
-/**
- End of File
-*/
+#endif /* SPI_POLLING_TYPES_H */
+

@@ -1,15 +1,13 @@
 /**
- * System Driver Header File
- * 
- * @file system.h
- * 
- * @defgroup systemdriver System Driver
- * 
- * @brief This file contains the API prototype for the System driver.
+ * SPI Driver API Interface File
  *
- * @version Driver Version 1.0.1
+ * @file spi_interface.h
  *
- * @version Package Version 1.0.1
+ * @defgroup spi SPI
+ *
+ * @brief This header file provides API prototypes for the SPI module in Polling and Interrupt mode.
+ *
+ * @version SPI Interface Version v3.0.0
 */
 
 /*
@@ -33,33 +31,34 @@
     THIS SOFTWARE.
 */
 
-#ifndef SYSTEM_H
-#define	SYSTEM_H
+#ifndef SPI_INTERFACE_H
+#define SPI_INTERFACE_H
 
-#include <xc.h>
 #include <stdint.h>
 #include <stdbool.h>
-#include "config_bits.h"
-#include "../system/pins.h"
-#include "../uart/eusart.h"
-#include "../peripheral/mssp1.h"
-#include "../peripheral/power.h"
-#include "../spi/mssp2.h"
-#include "../system/interrupt.h"
-#include "../system/clock.h"
-#include "../timer/tmr1.h"
-#include "../timer/tmr2.h"
-
+#include <stddef.h>
+        
 /**
- * @ingroup systemdriver
- * @brief Initializes the system module.
- * This routine is called only once during system initialization, before calling other APIs.
- * @param None.
- * @return None.
-*/
-void SYSTEM_Initialize(void);
+ * @ingroup spi
+ * @struct SPI_INTERFACE SPI
+ * @brief SPI Driver prototypes struct.
+ */ 
+struct SPI_INTERFACE
+{   
+    void (*Initialize)(void);
+    void (*Deinitialize)(void);
+    bool (*Open)(uint8_t spiConfigIndex);
+    void (*Close)(void);
+    void (*BufferExchange)(void *bufferData, size_t bufferSize);
+    void (*BufferRead)(void *bufferData, size_t bufferSize);
+    void (*BufferWrite)(void *bufferData, size_t bufferSize); 
+    uint8_t (*ByteExchange)(uint8_t byteData);    
+    uint8_t (*ByteRead)(void);
+    void (*ByteWrite)(uint8_t byteData);
+    bool (*IsRxReady)(void);
+    bool (*IsTxReady)(void);
+    void (*RxCompleteCallbackRegister)(void (*callbackHandler)(void));
+    void (*TxCompleteCallbackRegister)(void (*callbackHandler)(void));
+};
 
-#endif	/* SYSTEM_H */
-/**
- End of File
-*/
+#endif /* SPI_INTERFACE_H */

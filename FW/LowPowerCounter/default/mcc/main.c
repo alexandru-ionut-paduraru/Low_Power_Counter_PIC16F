@@ -36,12 +36,19 @@
 #include "mcc_generated_files/timer/tmr1.h"
 #include "mcc_generated_files/power/power.h"
 #include "mcc_generated_files/timer/tmr2_deprecated.h"
-
+#include "nrf24l01.h"
 /*
     Main application
 */
 uint8_t dataSent=0;
 uint8_t tmr2_event=0;
+nrf24l01_device_t radio_dev; // Global instance of the nRF24L01 device structure
+/***********************************************************************
+    Radio module nRF24L01 functions
+***********************************************************************/
+
+
+
 void TMR1_CB(void){
     static uint16_t led_count=0;
     led_count++;
@@ -86,6 +93,11 @@ int main(void)
     // Disable the Peripheral Interrupts 
     //INTERRUPT_PeripheralInterruptDisable(); 
 
+    //initialize nrf24l01 device structure with user defined SPI and pin control functions
+    nrf24l01_spi_transfer_fn_register(&radio_dev, &SPI1_Exchange8bitBuffer);
+    nrf24l01_pin_set_fn_csn_register(&radio_dev, &NRF24L01_CSN_SetHigh); // Example: CSN pin active low
+    nrf24l01_pin_set_fn_ce_register(&radio_dev, &NRF24L01_CE_SetHigh); // Example: CE pin active high
+    
     POWER_PeripheralDisableAll();
     POWER_PeripheralEnable(POWER_TMR1);
     POWER_PeripheralEnable(POWER_TMR2);

@@ -51,8 +51,10 @@ void SYSTEM_Initialize(void)
     TMR1_Initialize();
     TMR2_Initialize();
     EUSART_Initialize();
+    MSSP1_Initialize();
     PMD_Initialize();
     POWER_Initialize();
+    SPI2_Initialize();
     INTERRUPT_Initialize();
 }
 

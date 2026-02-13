@@ -75,7 +75,13 @@
                 "default/mcc/mcc_generated_files/peripheral/power.h",
                 "default/mcc/mcc_generated_files/timer/src/tmr2.c",
                 "default/mcc/mcc_generated_files/timer/tmr2.h",
-                "default/mcc/mcc_generated_files/timer/tmr2_deprecated.h"
+                "default/mcc/mcc_generated_files/timer/tmr2_deprecated.h",
+                "default/mcc/mcc_generated_files/peripheral/src/mssp1.c",
+                "default/mcc/mcc_generated_files/peripheral/mssp1.h",
+                "default/mcc/mcc_generated_files/spi/src/mssp2.c",
+                "default/mcc/mcc_generated_files/spi/spi_polling_types.h",
+                "default/mcc/mcc_generated_files/spi/mssp2.h",
+                "default/mcc/mcc_generated_files/spi/spi_interface.h"
             ]
         }
     ]
