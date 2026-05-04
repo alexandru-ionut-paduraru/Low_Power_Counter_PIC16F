@@ -30,6 +30,7 @@
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
     THIS SOFTWARE.
 */
+#include "mcc_generated_files/spi/mssp2.h"
 #include "mcc_generated_files/system/interrupt.h"
 #include "mcc_generated_files/system/pins.h"
 #include "mcc_generated_files/system/system.h"
@@ -70,6 +71,22 @@ void INT_CB(void){
     // LED_Toggle();
 }
 
+void NRF24L01_CSN_Set(bool level){
+    if (level){
+        CSN_SetHigh();
+    }else{
+        CSN_SetLow(); 
+    }
+}
+
+void NRF24L01_CE_Set(bool level){
+    if (level){
+        CE_SetHigh();
+    }else{
+        CE_SetLow(); 
+    }
+}
+
 int main(void)
 {
     static uint8_t state=0;
@@ -94,9 +111,9 @@ int main(void)
     //INTERRUPT_PeripheralInterruptDisable(); 
 
     //initialize nrf24l01 device structure with user defined SPI and pin control functions
-    nrf24l01_spi_transfer_fn_register(&radio_dev, &SPI1_Exchange8bitBuffer);
-    nrf24l01_pin_set_fn_csn_register(&radio_dev, &NRF24L01_CSN_SetHigh); // Example: CSN pin active low
-    nrf24l01_pin_set_fn_ce_register(&radio_dev, &NRF24L01_CE_SetHigh); // Example: CE pin active high
+    nrf24l01_spi_transfer_fn_register(&radio_dev, &SPI2_BufferExchange);
+    nrf24l01_pin_set_fn_csn_register(&radio_dev, &NRF24L01_CSN_Set); // Example: CSN pin active low
+    nrf24l01_pin_set_fn_ce_register(&radio_dev, &NRF24L01_CE_Set); // Example: CE pin active high
     
     POWER_PeripheralDisableAll();
     POWER_PeripheralEnable(POWER_TMR1);

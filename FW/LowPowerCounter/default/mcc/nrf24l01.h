@@ -5,7 +5,7 @@
 #include <stdbool.h>
 #include <stddef.h>
 
-typedef void (*spi_transfer_fn)(const uint8_t *out, uint8_t *in, size_t len);
+typedef void (*spi_transfer_fn)(void *in_out_buff, size_t len);
 typedef void (*pin_set_fn)(bool level);
 
 /*********************************************************************
@@ -57,7 +57,7 @@ typedef struct {
     setup. The registered function will be called internally by the nRF24L01 driver when SPI
     communication is required.
 ***************************************************************/
-uint8_t nrf24l01_spi_transfer_fn_register(nrf24l01_device_t *dev, spi_transfer_fn *fn);
+uint8_t nrf24l01_spi_transfer_fn_register(nrf24l01_device_t *dev, spi_transfer_fn fn);
 
 /****************************************************************
     @def pin_set_fn_csn_register
@@ -71,7 +71,7 @@ uint8_t nrf24l01_spi_transfer_fn_register(nrf24l01_device_t *dev, spi_transfer_f
     essential for SPI communication with the nRF24L01 module. The registered function will be called
     internally by the nRF24L01 driver to control the CSN pin during SPI transactions, ensuring proper communication with the radio module.
 *****************************************************************/
-uint8_t nrf24l01_pin_set_fn_csn_register(nrf24l01_device_t *dev, pin_set_fn *fn);
+uint8_t nrf24l01_pin_set_fn_csn_register(nrf24l01_device_t *dev, pin_set_fn fn);
 
 /******************************************************************
     @def pin_set_fn_ce_register
@@ -85,6 +85,6 @@ uint8_t nrf24l01_pin_set_fn_csn_register(nrf24l01_device_t *dev, pin_set_fn *fn)
     crucial for controlling the operating mode of the nRF24L01 module (e.g.,
     transmitting or receiving). The registered function will be called internally by the nRF24L01 driver to control the CE pin as needed during operation.
 ******************************************************************/
-uint8_t nrf24l01_pin_set_fn_ce_register(nrf24l01_device_t *dev, pin_set_fn *fn);
+uint8_t nrf24l01_pin_set_fn_ce_register(nrf24l01_device_t *dev, pin_set_fn fn);
 
 #endif /* NRF24L01_H */

@@ -1,7 +1,4 @@
 {
-    "mplab.clangd.arguments": [
-        "--compile-commands-dir=${workspaceFolder}\\_build\\LowPowerCounter\\default"
-    ],
     "mplab.clangd.path": "c:\\Program Files\\Microchip\\xc8\\v3.00\\bin\\xc8-clangd.exe",
     "memory-inspector.debugTypes": [
         "arm-debugger",
@@ -9,5 +6,6 @@
         "gdb",
         "mplab-core-da"
     ],
-    "C_Cpp.intelliSenseEngine": "disabled"
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "mplab.clangd.compileCommandsDir": "${workspaceFolder}\\_build\\LowPowerCounter\\default"
 }

@@ -1,5 +1,24 @@
 {
-    "version": "1.9",
+    "version": "1.8",
+    "configurations": [
+        {
+            "name": "default",
+            "id": "",
+            "device": "PIC16F18345",
+            "imagePath": "./out/LowPowerCounter/default.elf",
+            "toolProperties": "default-tool-base",
+            "tool": "PICkit 4",
+            "packs": [
+                {
+                    "name": "PIC16F1xxxx_DFP",
+                    "vendor": "Microchip",
+                    "version": "1.29.444"
+                }
+            ],
+            "fileSet": "default",
+            "toolchain": "default-XC8"
+        }
+    ],
     "propertyGroups": [
         {
             "name": "default-XC8",
@@ -64,26 +83,6 @@
                 "default/mcc/mcc_generated_files/spi/mssp2.h",
                 "default/mcc/mcc_generated_files/spi/spi_interface.h"
             ]
-        }
-    ],
-    "configurations": [
-        {
-            "name": "default",
-            "id": "",
-            "device": "PIC16F18345",
-            "imagePath": "./out/LowPowerCounter/default.elf",
-            "toolProperties": "default-tool-base",
-            "tool": "PICkit 4",
-            "packs": [
-                {
-                    "name": "PIC16F1xxxx_DFP",
-                    "vendor": "Microchip",
-                    "version": "1.29.444"
-                }
-            ],
-            "fileSet": "default",
-            "toolchain": "default-XC8",
-            "includeLegacyMacros": true
         }
     ]
 }

@@ -41,7 +41,6 @@
 #include <stdbool.h>
 #include "config_bits.h"
 #include "../system/pins.h"
-#include "../uart/eusart.h"
 #include "../peripheral/mssp1.h"
 #include "../peripheral/power.h"
 #include "../spi/mssp2.h"

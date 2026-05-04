@@ -50,7 +50,6 @@ void SYSTEM_Initialize(void)
     PIN_MANAGER_Initialize();
     TMR1_Initialize();
     TMR2_Initialize();
-    EUSART_Initialize();
     MSSP1_Initialize();
     PMD_Initialize();
     POWER_Initialize();

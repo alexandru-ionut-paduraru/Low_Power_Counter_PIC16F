@@ -5,20 +5,18 @@
 
 // Internal helper: Read nRF24L01 register
 static uint8_t nrf24_reg_read(nrf24l01_device_t *dev, uint8_t reg) {
-    uint8_t out[2] = {NRF24_CMD_READ_REG | (reg & 0x1F), 0xFF};
-    uint8_t in[2];
+    uint8_t in_out[2] = {NRF24_CMD_READ_REG | (reg & 0x1F), 0xFF};
     dev->csn_set(false);
-    dev->spi_transfer(out, in, 2);
+    dev->spi_transfer(in_out, 2);
     dev->csn_set(true);
-    return in[1];
+    return in_out[1];
 }
 
 // Internal helper: Write nRF24L01 register
 static void nrf24_reg_write(nrf24l01_device_t *dev, uint8_t reg, uint8_t value) {
-    uint8_t out[2] = {NRF24_CMD_WRITE_REG | (reg & 0x1F), value};
-    uint8_t in[2];
+    uint8_t in_out[2] = {NRF24_CMD_WRITE_REG | (reg & 0x1F), value};
     dev->csn_set(false);
-    dev->spi_transfer(out, in, 2);
+    dev->spi_transfer(in_out, 2);
     dev->csn_set(true);
 }
 
@@ -28,12 +26,12 @@ void nrf24l01_init(nrf24l01_device_t *dev) {
     // Flush RX/TX FIFO
     dev->csn_set(false);
     uint8_t cmd_flush_rx = NRF24_CMD_FLUSH_RX;
-    dev->spi_transfer(&cmd_flush_rx, NULL, 1);
+    dev->spi_transfer(&cmd_flush_rx, 1);
     dev->csn_set(true);
 
     dev->csn_set(false);
     uint8_t cmd_flush_tx = NRF24_CMD_FLUSH_TX;
-    dev->spi_transfer(&cmd_flush_tx, NULL, 1);
+    dev->spi_transfer(&cmd_flush_tx, 1);
     dev->csn_set(true);
 
     // Set CONFIG register: power up, RX mode
@@ -57,8 +55,8 @@ uint8_t nrf24l01_read_data(nrf24l01_device_t *dev, uint8_t *rx_buf, uint8_t max_
     dev->csn_set(false);
     uint8_t out[1] = {NRF24_CMD_READ_PAYLOAD};
     uint8_t *in = rx_buf;
-    dev->spi_transfer(out, NULL, 1); // send command
-    dev->spi_transfer(NULL, in, max_len); // receive payload
+    dev->spi_transfer(&out[0], 1); // send command
+    dev->spi_transfer(in, max_len); // receive payload
     dev->csn_set(true);
 
     // Clear RX_DR bit (write 1 to STATUS to reset)
@@ -86,7 +84,7 @@ void nrf24l01_wake(nrf24l01_device_t *dev) {
     dev->ce_set(true);
 }
 
-uint8_t nrf24l01_spi_transfer_fn_register(nrf24l01_device_t *dev, spi_transfer_fn *fn){
+uint8_t nrf24l01_spi_transfer_fn_register(nrf24l01_device_t *dev, spi_transfer_fn fn){
     if (dev == NULL || fn == NULL) {
         return 0; // Failure
     }
@@ -94,7 +92,7 @@ uint8_t nrf24l01_spi_transfer_fn_register(nrf24l01_device_t *dev, spi_transfer_f
     return 1; // Success
 }
 
-uint8_t nrf24l01_pin_set_fn_csn_register(nrf24l01_device_t *dev, pin_set_fn *fn){
+uint8_t nrf24l01_pin_set_fn_csn_register(nrf24l01_device_t *dev, pin_set_fn fn){
     if (dev == NULL || fn == NULL) {
         return 0; // Failure
     }
@@ -102,13 +100,12 @@ uint8_t nrf24l01_pin_set_fn_csn_register(nrf24l01_device_t *dev, pin_set_fn *fn)
     return 1; // Success
 }
 
-uint8_t nrf24l01_pin_set_fn_ce_register(nrf24l01_device_t *dev, pin_set_fn *fn){
+uint8_t nrf24l01_pin_set_fn_ce_register(nrf24l01_device_t *dev, pin_set_fn fn){
     if (dev == NULL || fn == NULL) {
         return 0; // Failure
     }
     dev->ce_set = *fn; 
     return 1; // Success
 }
-
 
 // ... end of source ...

@@ -40,21 +40,21 @@ void PIN_MANAGER_Initialize(void)
    /**
     LATx registers
     */
-    LATA = 0x20;
+    LATA = 0x0;
     LATB = 0x0;
     LATC = 0x0;
 
     /**
     TRISx registers
     */
-    TRISA = 0x1F;
+    TRISA = 0x3B;
     TRISB = 0x50;
-    TRISC = 0x7F;
+    TRISC = 0x7B;
 
     /**
     ANSELx registers
     */
-    ANSELA = 0x0;
+    ANSELA = 0x30;
     ANSELB = 0x0;
     ANSELC = 0x0;
 
@@ -90,9 +90,7 @@ void PIN_MANAGER_Initialize(void)
     */
     SSP2DATPPS = 0xC; //RB4->MSSP2:SDI2;
     INTPPS = 0x10; //RC0->INTERRUPT MANAGER:INT;
-    RXPPS = 0x4; //RA4->EUSART:RX;
     RB5PPS = 27;  //RB5->MSSP2:SDO2;
-    RA5PPS = 20;  //RA5->EUSART:TX;
     SSP2CLKPPS = 0xE;  //RB6->MSSP2:SCK2;
     RB6PPS = 26;  //RB6->MSSP2:SCK2;
 
